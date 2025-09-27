@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 96.1%; /* #F5F5F5 */
+    --foreground: 231 15% 18%; /* #282A3A */
+    --card: 0 0% 100%;
+    --card-foreground: 231 15% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 231 15% 18%;
+    --primary: 182 100% 74%; /* #7DF9FF */
+    --primary-foreground: 231 15% 10%;
+    --secondary: 0 0% 93.3%;
+    --secondary-foreground: 231 15% 18%;
+    --muted: 0 0% 90.2%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 241 81% 60%; /* #514DE9 */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 241 81% 60%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 231 15% 18%; /* #282A3A */
+    --foreground: 0 0% 96.1%; /* #F5F5F5 */
+    --card: 231 15% 15%;
+    --card-foreground: 0 0% 96.1%;
+    --popover: 231 15% 15%;
+    --popover-foreground: 0 0% 96.1%;
+    --primary: 182 100% 74%; /* #7DF9FF */
+    --primary-foreground: 231 15% 10%;
+    --secondary: 231 15% 22%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 231 15% 22%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 241 81% 60%; /* #514DE9 */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 231 15% 25%;
+    --input: 231 15% 25%;
+    --ring: 241 81% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out;
+  }
+  
+  @keyframes scroll-x {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-scroll-x {
+    animation: scroll-x 40s linear infinite;
+  }
+}

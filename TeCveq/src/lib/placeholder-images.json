@@ -1,0 +1,58 @@
+{
+  "placeholderImages": [
+    {
+      "id": "automation-service",
+      "description": "An abstract visualization of automation workflows.",
+      "imageUrl": "https://images.unsplash.com/photo-1593998066526-65fcab3021a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNHx8d29ya2Zsb3clMjBhdXRvbWF0aW9ufGVufDB8fHx8MTc2MDMzODc3NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "workflow automation"
+    },
+    {
+      "id": "ai-service",
+      "description": "An abstract representation of an AI brain network.",
+      "imageUrl": "https://images.unsplash.com/photo-1534723452862-4c874018d66d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxBSSUyMHJvYm90fGVufDB8fHx8MTc2MDMzODg5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "AI robot"
+    },
+    {
+      "id": "dev-service",
+      "description": "A mobile and web application interface on a screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1559028006-44d5a2b3e3c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3ZWIlMjBkZXZlbG9wbWVudHxlbnwwfHx8fDE3NjAzMzg5NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "web development"
+    },
+    {
+      "id": "ux-service",
+      "description": "A user interface design wireframe on a screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxVSSUyMHdpcmVmcmFtZXxlbnwwfHx8fDE3NTg5ODgxMzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "UI wireframe"
+    },
+    {
+      "id": "cloud-service",
+      "description": "An abstract representation of cloud computing infrastructure.",
+      "imageUrl": "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjbG91ZCUyMGNvbXB1dGluZ3xlbnwwfHx8fDE3NjAzMzkxMDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cloud computing"
+    },
+    {
+      "id": "security-service",
+      "description": "A digital shield protecting data.",
+      "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjeWJlciUyMHNlY3VyaXR5fGVufDB8fHx8MTc2MDMzOTAyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cyber security"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "A professional headshot of a client.",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg5MDE5MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "A professional headshot of another client.",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg5MDE5MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "A professional headshot of a third client.",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg5MDE5MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    }
+  ]
+}
