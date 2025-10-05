@@ -1,5 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Bot, BrainCircuit, Smartphone, Cloud, PenTool, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -57,51 +55,83 @@ export default function ServiceShowcase() {
           </p>
         </div>
 
-        <Carousel
-          opts={{
-            align: "start",
-            slidesToScroll: 1,
-          }}
-          className="w-full max-w-7xl mx-auto mt-16"
-        >
-          <CarouselContent>
-            {services.map((service) => {
-              const image = PlaceHolderImages.find(p => p.id === service.imageId);
-              return (
-                <CarouselItem key={service.title} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2 h-full">
-                    <Card className="flex flex-col h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-card/60 dark:bg-card/70 backdrop-blur-xl rounded-2xl">
-                      {image && (
-                         <div className="aspect-video overflow-hidden border-b">
-                           <Image
-                              src={image.imageUrl}
-                              alt={image.description}
-                              width={600}
-                              height={400}
-                              className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                              data-ai-hint={image.imageHint}
-                            />
-                         </div>
-                      )}
-                      <CardHeader className="flex-row items-center gap-4 space-y-0">
-                        {service.icon}
-                        <div className="flex-1">
-                          <CardTitle className="text-xl font-headline">{service.title}</CardTitle>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="flex-1 pt-0">
-                        <p className="text-muted-foreground">{service.description}</p>
-                      </CardContent>
-                    </Card>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+          {services.map((service) => {
+            const image = PlaceHolderImages.find(p => p.id === service.imageId);
+            return (
+              <div key={service.title} className="service-card">
+                <div className="card-inner">
+                  {image && (
+                    <div className="aspect-video overflow-hidden rounded-t-lg">
+                      <Image
+                        src={image.imageUrl}
+                        alt={image.description}
+                        width={600}
+                        height={400}
+                        className="w-full h-full object-cover transition-transform duration-500"
+                        data-ai-hint={image.imageHint}
+                      />
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 mb-4">
+                      {service.icon}
+                      <h3 className="text-xl font-bold font-headline">{service.title}</h3>
+                    </div>
+                    <p className="text-muted-foreground">{service.description}</p>
                   </div>
-                </CarouselItem>
-              )
-            })}
-          </CarouselContent>
-          <CarouselPrevious className="hidden sm:flex -left-4" />
-          <CarouselNext className="hidden sm:flex -right-4" />
-        </Carousel>
+                </div>
+              </div>
+            )
+          })}
+        </div>
       </div>
+
+      {/* Modern card animation styles */}
+      <style jsx global>{`
+        .service-card {
+          position: relative;
+          perspective: 1000px;
+        }
+
+        .card-inner {
+          position: relative;
+          background: hsl(var(--card));
+          border-radius: 16px;
+          overflow: hidden;
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+          transform-style: preserve-3d;
+          height: 100%;
+        }
+
+        .service-card::before {
+          content: "";
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          right: -2px;
+          bottom: -2px;
+          background: linear-gradient(45deg, hsl(var(--primary)/0.3), hsl(var(--accent)/0.3), hsl(var(--primary)/0.3));
+          border-radius: 18px;
+          z-index: -1;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+        }
+
+        .service-card:hover::before {
+          opacity: 1;
+        }
+
+        .service-card:hover .card-inner {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card:hover img {
+          transform: scale(1.05);
+        }
+      `}</style>
     </section>
   );
 }
